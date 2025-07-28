@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: encurtalink  #Nome da aplicacao
+
+    server:
+      port:8080 # porta padrao
+
+
+application:
+  security:
+    jwt:
+      # IMPORTANTE: Em um projeto real, esta chave deve ser longa, segura e
+      # vir de uma variável de ambiente, nunca fixa no código.
+      secret-key: "4D6251655468576D5A7134743777217A25432A462D4A614E645267556B587032"
+      # Tempo de expiração do token em milissegundos (24 horas)
+      expiration: 86400000

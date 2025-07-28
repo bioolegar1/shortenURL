@@ -1,0 +1,24 @@
+server:
+  port: 8081
+
+spring:
+  # --- Config do banco de dados h2
+  datasource:
+    url: jdbc:h2:mem:curtailment
+    driverClassName: org.h2.Driver
+    username: sa
+    password: 12345
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      # Ddl-auto: create-drop ≥ recria o banco a cada reinicialização. Ótimo para dev.
+      # ddl-auto: update -> atualiza o schema sem apagar os dados.
+      ddl-auto: update
+    show-sql: true
+
+    # --- Habilitando console h2
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
